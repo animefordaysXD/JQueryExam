@@ -30,6 +30,7 @@
         // 요소[속성 = '값'] : 포함하는 요소
         $("a[href= 'www']").addClass("f_skyblue");
     });
+ </scipt>   
 </head>
 <body>
 <a href="https://www.naver.com">네이버</a>
