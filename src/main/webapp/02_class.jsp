@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <style type="text/css">
-.silver{background-color: silver;}
+.silver{background-color: blue;}
 .orange{color: white; background-color: orange;}
 
 </style>
