@@ -21,19 +21,57 @@
   padding: 30px;
   float: right;
  }
+ #cookieOff{
+ padding: 30px;
+ float: right;
+ }
+  #cookieOff2{
+ padding: 30px;
+ float: right;
+ }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 <script type="text/javascript">
 /* function close(){
 	$(function() {
 		$(".movie").remove();
 	});
 } */
+
+
+
 $(function() {
+	var checkbox = document.getElementById("cookieOff");
+	var cookieValue=$.cookie("DisablePop");
+	var checkbox2 = document.getElementById("cookieOff2");
+	var cookieValue2=$.cookie("DisablePop2");
+	if(cookieValue){
+		$("#movie").css("display","none");
+	}
+	if(cookieValue2){
+		$("#movie2").css("display","none");
+	}
+	/* $("#cookieOff").click(function() {
+		
+		console.log(checkbox.checked);
+	}); */
+	
+	
+	
+	
 $("#close").click(function() {
+	if(checkbox){
+		$.cookie("DisablePop","true",1);
+	}
+	
 	$("#movie").css("display","none");
+	
 });
 $("#close2").click(function() {
+	if(checkbox2){
+		$.cookie("DisablePop2","true",1);
+	}
 	$("#movie2").css("display","none");
 });
 
@@ -55,6 +93,7 @@ sdfsf
 
 </pre>
 <img alt="" src="images/pineapple.jpg"><br>
+<input type="checkbox" id="cookieOff">
 <div id="close">닫기</div>
 </div>
 
@@ -71,6 +110,7 @@ sdfsf
 
 </pre>
 <img alt="" src="images/pic_trulli.jpg"><br>
+<input type="checkbox" id="cookieOff2">
 <div id="close2">닫기</div>
 </div>
 
